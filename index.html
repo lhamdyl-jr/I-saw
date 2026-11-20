@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I saw — Photography</title>
+  <meta name="description" content="I saw — a photography portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="#top" class="logo">I saw</a>
+  <nav>
+    <a href="#albums">Albums</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- الصفحة الرئيسية -->
+<div id="home">
+  <section class="hero" id="top">
+    <p class="eyebrow">Photography by YOUR NAME</p>
+    <h1>I <em>saw.</em></h1>
+    <p class="tagline">Moments, light, and the things most people walk past.</p>
+    <a href="#albums" class="scroll">View albums ↓</a>
+  </section>
+
+  <section id="albums" class="albums">
+    <h2>Albums</h2>
+    <div class="album-grid" id="album-grid"></div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>اكتب هنا نبذة عنك: مين انت، بتصور إيه، وإيه اللي بيميز نظرتك. جملتين أو تلاتة كفاية.</p>
+  </section>
+</div>
+
+<!-- صفحة الألبوم -->
+<section id="album-view" class="album-view" hidden>
+  <a href="#albums" class="back">← All albums</a>
+  <h2 id="album-title"></h2>
+  <p id="album-desc" class="album-desc"></p>
+  <div class="gallery" id="gallery"></div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Let's work together</h2>
+  <a class="mail" href="mailto:you@example.com">you@example.com</a>
+  <div class="social">
+    <a href="https://instagram.com/yourname" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://behance.net/yourname" target="_blank" rel="noopener">Behance</a>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> I saw. All rights reserved.</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="close" id="close" aria-label="Close">×</button>
+  <button class="prev" id="prev" aria-label="Previous">‹</button>
+  <img id="lb-img" alt="">
+  <button class="next" id="next" aria-label="Next">›</button>
+  <p class="caption" id="caption"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
