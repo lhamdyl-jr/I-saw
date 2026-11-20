@@ -6,26 +6,26 @@
 // =====================================================
 const albums = [
   {
-    id: "places",
-    title: "Places",
-    description: "Streets, corners, and cities I walked through.",
-    folder: "images/places",
+    id: "early",
+    title: "Photos I Thought Were Great",
+    description: "Where it all began: early frames, honest mistakes, and the instinct that kept me shooting.",
+    folder: "images/early",
     cover: "",
     photos: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"],
   },
   {
-    id: "people",
-    title: "People",
-    description: "Faces and stories.",
-    folder: "images/people",
+    id: "animals",
+    title: "Cats & Creatures",
+    description: "Soft paws, wild eyes, and the split second they decide to look back.",
+    folder: "images/animals",
     cover: "",
     photos: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"],
   },
   {
-    id: "nature",
-    title: "Nature",
-    description: "Light, landscapes, and quiet moments.",
-    folder: "images/nature",
+    id: "buildings",
+    title: "Buildings",
+    description: "Lines, light, and the stories carved into stone and concrete.",
+    folder: "images/buildings",
     cover: "",
     photos: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"],
   },
@@ -54,7 +54,7 @@ albums.forEach(a => {
 
   const info = document.createElement("div");
   info.className = "album-info";
-  info.innerHTML = `<h3>${a.title}</h3><span>${a.photos.length} photos</span>`;
+  info.innerHTML = `<h3>${a.title}</h3><p>${a.description || ""}</p><span>${a.photos.length} photos</span>`;
 
   card.append(img, info);
   grid.appendChild(card);
